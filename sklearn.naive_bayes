@@ -1,0 +1,11 @@
+from sklearn.naive_bayes import GaussianNB
+
+# Toy dataset
+X = [[1.8, 6.5], [2.1, 5.8], [3.3, 4.9], [2.8, 5.7]]
+y = [0, 0, 1, 1]
+
+gnb = GaussianNB()
+gnb.fit(X, y)
+
+sample = [[2.5, 5.5]]
+print("Naive Bayes prediction:", gnb.predict(sample))
